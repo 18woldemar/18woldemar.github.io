@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Проверки наличия и распознавания кириллицы и латиницы в тексте" />
+	<meta name="keywords"
+		content="проверка символов из другой раскладки, проверка наличия символов из другой раскладки, форма проверки символов из другой раскладки, проверка символов из другой раскладки онлайн, распознавание кириллицы и латиницы, распознать кириллицу и латиницу, кириллица латиница определить, проверка кириллицы и латиницы, поиск кириллицы в латинице, проверить кириллица или латиница, как отличить кириллицу от латиницы, определение латиницы и кириллицы" />
+	<title>Распознавание кириллицы и латиницы</title>
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<link href="font-awesome.min.css" rel="stylesheet">
+	<link href="app.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="app">
+		<div class="content">
+			<div class="container">
+				<h2 class="text-center">Распознавание кириллицы и латиницы</h2>
+				<p class="text-center">Отличить английские символы (<span class="lat">латиница</span>) от русских (<span
+						class="cyr">кириллица</span>) в тексте</p>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h3 class="panel-title">Ввод</h3>
+							</div>
+							<div class="panel-body"><textarea class="input" name="content_html" autofocus=""
+									required="">Примeр русскoго текста cо вставками латинских симвoлов, который вы мoжете заменить нa свой, чтобы увидеть результат.</textarea>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h3 class="panel-title">Вывод</h3>
+							</div>
+							<div class="panel-body">
+								<div class="colored_output"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="script.js"></script>
