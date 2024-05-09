@@ -1,10 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=GFS+Didot");
-
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #eee;
 }
 
 .content {
@@ -13,16 +9,14 @@ body {
 }
 
 .content h2 {
-  font-family: "Raleway", sans-serif;
-  color: #333;
+  font-family: sans-serif;
   font-size: 36px;
   font-weight: 600;
   margin-top: 0;
 }
 
 .content p {
-  font: 600 14px "Raleway", sans-serif;
-  color: #333;
+  font: 600 14px sans-serif;
   line-height: 22px;
 }
 
@@ -40,7 +34,6 @@ body {
 }
 
 .content textarea {
-  background-color: #FFF;
   width: 100%;
   height: 600px;
   resize: none;
@@ -48,44 +41,116 @@ body {
   overflow-wrap: normal;
   overflow: auto;
   outline: none;
-  color: #000;
   padding: 15px;
 }
 
 .colored_output {
-  background-color: #FFF;
   height: 600px;
-  color: #000;
   padding: 15px;
   overflow: auto;
   white-space: nowrap;
 }
 
-::selection {
-  background: #ffb7b7;
-}
-
-::-moz-selection {
-  background: #ffb7b7;
-}
-
 .lat {
-  color: #428bca;
   font-weight: bold;
 }
 
 .cyr {
-  color: #ff5722;
   font-weight: bold;
-}
-
-h3 {
-  font-size: 26px;
-  color: #375a7f;
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 90%;
+  }
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+.content h2 {
+  color: #1F1F1F;
+}
+
+.content p {
+  color: #1F1F1F;
+}
+
+.panel {
+  background-color: #FFFFFF;
+}
+
+.panel-info {
+  border-color: #E5E5E5
+}
+
+.panel-info>.panel-heading {
+  color: #1F1F1F;
+  background-color: #F8F8F8;
+  border-color: #E5E5E5
+}
+
+.content textarea {
+  background-color: #FFFFFF;
+  color: #3B3B3B;
+}
+
+.colored_output {
+  background-color: #FFFFFF;
+  color: #3B3B3B;
+}
+
+.lat {
+  color: #005FB8;
+}
+
+.cyr {
+  color: #F85149;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #181818;
+  }
+
+  .content h2 {
+    color: #D7D7D7;
+  }
+
+  .content p {
+    color: #D7D7D7;
+  }
+
+  .panel {
+    background-color: #1F1F1F;
+  }
+
+  .panel-info {
+    border-color: #2B2B2B
+  }
+
+  .panel-info>.panel-heading {
+    color: #D7D7D7;
+    background-color: #181818;
+    border-color: #2B2B2B
+  }
+
+  .content textarea {
+    background-color: #1F1F1F;
+    color: #CCCCCC;
+  }
+
+  .colored_output {
+    background-color: #1F1F1F;
+    color: #CCCCCC;
+  }
+
+  .lat {
+    color: #0078D4;
+  }
+
+  .cyr {
+    color: #F85149;
   }
 }
