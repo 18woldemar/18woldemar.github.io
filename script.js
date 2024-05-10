@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('.input').on('keyup', function () {
+	$('.input').on('input', function () {
 		start();
 	});
 
