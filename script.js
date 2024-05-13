@@ -49,7 +49,7 @@ $(document).ready(function () {
 		ostr = ostr.replace(/\n/g, "<br>");
 		ostr = ostr.replace(/\s/g, "&nbsp;");
 		ostr = ostr.replace(/span_class/g, "span class");
-		$('.colored_output').html(ostr);
+		$('.output').html(ostr);
 	}
 	start();
 });
@@ -73,4 +73,4 @@ function syncScroll(el1, el2) {
 		$el.scrollLeft(percent * ($el[0].scrollWidth - $el.outerWidth()));
 	}
 }
-syncScroll($('.input'), $('.colored_output'));
+syncScroll($('.input'), $('.output'));

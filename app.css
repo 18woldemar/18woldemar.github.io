@@ -44,7 +44,7 @@ body {
   padding: 15px;
 }
 
-.colored_output {
+.output {
   height: 600px;
   padding: 15px;
   overflow: auto;
@@ -96,7 +96,7 @@ body {
   color: #3B3B3B;
 }
 
-.colored_output {
+.output {
   background-color: #FFFFFF;
   color: #3B3B3B;
 }
@@ -141,7 +141,7 @@ body {
     color: #CCCCCC;
   }
 
-  .colored_output {
+  .output {
     background-color: #1F1F1F;
     color: #CCCCCC;
   }
