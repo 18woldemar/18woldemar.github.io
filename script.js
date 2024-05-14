@@ -52,25 +52,26 @@ $(document).ready(function () {
 		$('.output').html(ostr);
 	}
 	start();
+
+	function syncScroll(el1, el2) {
+		let $el1 = $(el1);
+		let $el2 = $(el2);
+		let forcedScroll = false;
+		$el1.scroll(function () { performScroll($el1, $el2); });
+		$el2.scroll(function () { performScroll($el2, $el1); });
+		function performScroll($scrolled, $toScroll) {
+			if (forcedScroll) return (forcedScroll = false);
+			setScrollTopFromPercent($toScroll, $scrolled.scrollTop() / ($scrolled[0].scrollHeight - $scrolled.outerHeight()));
+			setScrollLeftFromPercent($toScroll, $scrolled.scrollLeft() / ($scrolled[0].scrollWidth - $scrolled.outerWidth()));
+		}
+		function setScrollTopFromPercent($el, percent) {
+			forcedScroll = true;
+			$el.scrollTop(percent * ($el[0].scrollHeight - $el.outerHeight()));
+		}
+		function setScrollLeftFromPercent($el, percent) {
+			forcedScroll = true;
+			$el.scrollLeft(percent * ($el[0].scrollWidth - $el.outerWidth()));
+		}
+	}
+	syncScroll($('.input'), $('.output'));
 });
-function syncScroll(el1, el2) {
-	let $el1 = $(el1);
-	let $el2 = $(el2);
-	let forcedScroll = false;
-	$el1.scroll(function () { performScroll($el1, $el2); });
-	$el2.scroll(function () { performScroll($el2, $el1); });
-	function performScroll($scrolled, $toScroll) {
-		if (forcedScroll) return (forcedScroll = false);
-		setScrollTopFromPercent($toScroll, $scrolled.scrollTop() / ($scrolled[0].scrollHeight - $scrolled.outerHeight()));
-		setScrollLeftFromPercent($toScroll, $scrolled.scrollLeft() / ($scrolled[0].scrollWidth - $scrolled.outerWidth()));
-	}
-	function setScrollTopFromPercent($el, percent) {
-		forcedScroll = true;
-		$el.scrollTop(percent * ($el[0].scrollHeight - $el.outerHeight()));
-	}
-	function setScrollLeftFromPercent($el, percent) {
-		forcedScroll = true;
-		$el.scrollLeft(percent * ($el[0].scrollWidth - $el.outerWidth()));
-	}
-}
-syncScroll($('.input'), $('.output'));
