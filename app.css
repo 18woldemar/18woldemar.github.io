@@ -111,6 +111,10 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
   body {
     background-color: #181818;
   }
