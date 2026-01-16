@@ -1,5 +1,6 @@
 (async () => {
-  const endpoint = "https://text.pollinations.ai/openai/v1/chat/completions";
+  const endpoint = "https://gen.pollinations.ai/v1/chat/completions";
+  const apiKey = "pk_Uh4Bl0PtE7VjsqRz";
 
   const locales = {
     ru: {
@@ -132,7 +133,10 @@ Make the page informative, concise, and easy to understand.
     try {
       const res = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${apiKey}`
+        },
         body: JSON.stringify({
           model: "openai",
           messages: [
