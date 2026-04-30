@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const url = 'https://lambdadev.ru/';
+const url = 'https://18woldemar.github.io/';
 const lastmod = new Date().toISOString().slice(0, 10);
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
